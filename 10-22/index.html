@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Prekių sandėlis</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <h1>Prekių sandėlis</h1>
+
+    <h2>Prekės įvedimas</h2>
+
+    <form id="productForm">
+        <label>Produkto kodas (ID):</label>
+        <input type="text" id="productId">
+        <br><br>
+
+        <label>Pavadinimas:</label>
+        <input type="text" id="productName">
+        <br><br>
+
+        <label>Kiekis:</label>
+        <input type="number" id="productQuantity" min="1">
+        <br><br>
+
+        <button type="submit" id="saveButton">
+            Pridėti prekę
+        </button>
+
+        <button type="button" id="cancelButton">
+            Atšaukti redagavimą
+        </button>
+    </form>
+
+    <p id="message"></p>
+
+    <h2>Prekių paieška</h2>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Ieškoti pagal kodą arba pavadinimą"
+    >
+
+    <h2>Sandėlio prekės</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Pavadinimas</th>
+                <th>Kiekis</th>
+                <th>Veiksmai</th>
+            </tr>
+        </thead>
+        <tbody id="productTable"></tbody>
+    </table>
+
+    <hr>
+
+    <h2>Prekių krepšelis</h2>
+
+    <form id="cartForm">
+        <label>Produkto kodas:</label>
+        <input type="text" id="cartProductId">
+        <br><br>
+
+        <label>Kiekis:</label>
+        <input
+            type="number"
+            id="cartQuantity"
+            min="1"
+            value="1"
+        >
+        <br><br>
+
+        <button type="submit">Įdėti į krepšelį</button>
+    </form>
+
+    <p id="cartMessage"></p>
+
+    <h2>Krepšelio prekės</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Pavadinimas</th>
+                <th>Kiekis</th>
+                <th>Veiksmai</th>
+            </tr>
+        </thead>
+        <tbody id="cartTable"></tbody>
+    </table>
+
+</body>
+</html>
